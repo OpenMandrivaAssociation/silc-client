@@ -1,8 +1,8 @@
 # $Id: silc-client.spec 38507 2006-07-07 21:08:14Z nanardon $
 
 %define name silc-client
-%define version 1.0.2
-%define release %mkrel 2
+%define version 1.1.2
+%define release %mkrel 1
 
 %define _silcdatadir %{_datadir}/silc
 %define _silcetcdir %{_sysconfdir}/silc
@@ -20,7 +20,7 @@ BuildRequires:	ncurses-devel
 BuildRequires:	perl-devel
 BuildRequires:	glib2-devel
 BuildRequires:	gmp-devel
-BuildRequires:	automake1.8
+BuildRequires:	automake
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Conflicts:	irssi
 
@@ -36,15 +36,7 @@ different compared to IRC.
 
 %prep
 %setup -q
-%patch0 -p1 -b .glib-order
-
-find -type f | xargs file | grep -v script | cut -d: -f1 | xargs chmod -x
-
-pushd irssi
-aclocal-1.8 -I .
-automake-1.8 -a -c
-autoconf
-popd
+#patch0 -p1 -b .glib-order
 
 %build
 %configure2_5x \
