@@ -51,6 +51,10 @@ This contains the perl modules that come with SILC.
 
 %prep
 %setup -q
+sed -i -e "s:-g -O2:${optflags}:g" configure
+%ifarch x86_64
+sed -i -e 's:felf\([^6]\):felf64\1:g' configure
+%endif
 
 %build
 %configure2_5x \
