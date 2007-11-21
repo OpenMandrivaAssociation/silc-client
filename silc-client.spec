@@ -1,7 +1,5 @@
-# $Id: silc-client.spec 38507 2006-07-07 21:08:14Z nanardon $
-
 %define name silc-client
-%define version 1.1.2
+%define version 1.1.3
 %define release %mkrel 1
 
 %define _silcdatadir %{_datadir}/silc
