@@ -10,7 +10,7 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source0:	http://www.silcnet.org/download/client/sources/%{name}-%{version}.tar.bz2
-License:	GPL
+License:	GPLv2+
 Group:		Networking/Chat
 URL:		http://www.silcnet.org/
 BuildRequires:	ncurses-devel
@@ -33,7 +33,7 @@ is secure what IRC is not in any way.  The network model is also entirely
 different compared to IRC.
 
 %package -n perl-silc
-Group: Development/perl
+Group: Development/Perl
 Summary: Perl part of the SILC client
 
 %description -n perl-silc
