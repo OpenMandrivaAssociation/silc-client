@@ -19,7 +19,6 @@ BuildRequires:	glib2-devel
 BuildRequires:	gmp-devel
 BuildRequires:	automake
 BuildRequires:	silc-toolkit-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Conflicts:	irssi
 
 %description
