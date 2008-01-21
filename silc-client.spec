@@ -1,6 +1,6 @@
 %define name silc-client
 %define version 1.1.3
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define _silcdatadir %{_datadir}/silc
 %define _silcetcdir %{_sysconfdir}/silc
