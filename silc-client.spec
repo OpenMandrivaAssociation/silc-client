@@ -12,6 +12,7 @@ Release:	%{release}
 Source0:	http://www.silcnet.org/download/client/sources/%{name}-%{version}.tar.bz2
 License:	GPLv2+
 Group:		Networking/Chat
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://www.silcnet.org/
 BuildRequires:	ncurses-devel
 BuildRequires:	perl-devel
