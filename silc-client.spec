@@ -1,19 +1,15 @@
-%define name silc-client
-%define version 1.1.3
-%define release %mkrel 2
-
 %define _silcdatadir %{_datadir}/silc
 %define _silcetcdir %{_sysconfdir}/silc
 
 Summary:	Client for the secure Internet Live Conferencing (SILC) protocol
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Source0:	http://www.silcnet.org/download/client/sources/%{name}-%{version}.tar.bz2
+Name:		silc-client
+Version:	1.1.4
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Networking/Chat
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://www.silcnet.org/
+Source0:	http://www.silcnet.org/download/client/sources/%{name}-%{version}.tar.bz2
+BuildRequires:	nasm
 BuildRequires:	ncurses-devel
 BuildRequires:	perl-devel
 BuildRequires:	glib2-devel
@@ -21,6 +17,7 @@ BuildRequires:	gmp-devel
 BuildRequires:	automake
 BuildRequires:	silc-toolkit-devel
 Conflicts:	irssi
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 SILC (Secure Internet Live Conferencing) is a protocol which provides
@@ -33,8 +30,8 @@ is secure what IRC is not in any way.  The network model is also entirely
 different compared to IRC.
 
 %package -n perl-silc
-Group: Development/Perl
-Summary: Perl part of the SILC client
+Group:		Development/Perl
+Summary:	Perl part of the SILC client
 
 %description -n perl-silc
 SILC (Secure Internet Live Conferencing) is a protocol which provides
@@ -71,8 +68,7 @@ sed -i -e 's:felf\([^6]\):felf64\1:g' configure
 	--with-glib2 \
 	--without-libtoolfix
 
-# parallel make fails
-make
+%make
 
 %install
 rm -rf %{buildroot}
