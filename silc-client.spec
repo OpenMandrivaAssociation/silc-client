@@ -3,7 +3,7 @@
 
 Summary:	Client for the secure Internet Live Conferencing (SILC) protocol
 Name:		silc-client
-Version:	1.1.5
+Version:	1.1.6
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Networking/Chat
@@ -15,7 +15,7 @@ BuildRequires:	perl-devel
 BuildRequires:	glib2-devel
 BuildRequires:	gmp-devel
 BuildRequires:	automake
-BuildRequires:	silc-toolkit-devel
+BuildRequires:	silc-toolkit-devel >= 1.1.1
 Conflicts:	irssi
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
