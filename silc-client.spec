@@ -15,7 +15,7 @@ BuildRequires:	perl-devel
 BuildRequires:	glib2-devel
 BuildRequires:	gmp-devel
 BuildRequires:	automake
-BuildRequires:	silc-toolkit-devel >= 1.1.1
+BuildRequires:	silc-toolkit-devel >= 1.1.9
 Conflicts:	irssi
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
