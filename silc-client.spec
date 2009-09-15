@@ -3,12 +3,12 @@
 
 Summary:	Client for the secure Internet Live Conferencing (SILC) protocol
 Name:		silc-client
-Version:	1.1.7
+Version:	1.1.8
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Networking/Chat
 URL:		http://www.silcnet.org/
-Source0:	http://www.silcnet.org/download/client/sources/%{name}-%{version}.tar.bz2
+Source0:	http://www.silcnet.org/download/client/sources/%{name}-%{version}.tar.gz
 BuildRequires:	nasm
 BuildRequires:	ncurses-devel
 BuildRequires:	perl-devel
@@ -68,7 +68,7 @@ sed -i -e 's:felf\([^6]\):felf64\1:g' configure
 	--with-glib2 \
 	--without-libtoolfix
 
-%make
+make
 
 %install
 rm -rf %{buildroot}
