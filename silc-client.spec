@@ -4,7 +4,7 @@
 Summary:	Client for the secure Internet Live Conferencing (SILC) protocol
 Name:		silc-client
 Version:	1.1.8
-Release:	%mkrel 3
+Release:	4
 License:	GPLv2+
 Group:		Networking/Chat
 URL:		http://www.silcnet.org/
