@@ -7,7 +7,7 @@ Version:	1.1.8
 Release:	5
 License:	GPLv2+
 Group:		Networking/Chat
-URL:		http://www.silcnet.org/
+URL:		https://www.silcnet.org/
 Source0:	http://www.silcnet.org/download/client/sources/%{name}-%{version}.tar.gz
 BuildRequires:	nasm
 BuildRequires:	ncurses-devel
