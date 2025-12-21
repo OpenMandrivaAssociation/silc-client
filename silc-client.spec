@@ -9,6 +9,9 @@ License:	GPLv2+
 Group:		Networking/Chat
 URL:		https://www.silcnet.org/
 Source0:	http://www.silcnet.org/download/client/sources/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	nasm
 BuildRequires:	ncurses-devel
 BuildRequires:	perl-devel
